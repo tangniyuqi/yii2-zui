@@ -2,7 +2,7 @@
 
 ----------
 
-一个基于Yii2 + Bootstrap => ZUI 定制开源前端实践，帮助你快速构建现代跨屏应用。
+一个基于Yii2 + Zui v1.5 定制开源前端实践，帮助你快速构建现代跨屏应用。
 
 ZUI项目网站： http://zui.sexy/ 。
 
@@ -15,13 +15,13 @@ ZUI项目网站： http://zui.sexy/ 。
 Either run
 
 ```
-$ php composer.phar require tangniyuqi/yii2-zui "@dev"
+$ php composer.phar require tangniyuqi/yii2-zui "*"
 ```
 
 or add
 
 ```
-"tangniyuqi/yii2-zui": "~1"
+"tangniyuqi/yii2-zui": "*"
 ```
 
 to the ```require``` section of your `composer.json` file.
@@ -32,16 +32,10 @@ to the ```require``` section of your `composer.json` file.
 
 app/AppAsset.php;
 <?php
-....code...
 class AppAsset extends AssetBundle {
-
 ```
-
     public $depends = [
 		'yii\web\YiiAsset',
 		'tangniyuqi\zui\ZuiAsset',
 	];
 }
-
-## Demo
-暂无
