@@ -15,7 +15,7 @@ ZUI项目网站： http://zui.sexy/ 。
 Either run
 
 ```
-$ php composer.phar require tangniyuqi/yii2-zui "@dev"
+$ php composer.phar require tangniyuqi/yii2-zui "*"
 ```
 
 or add
@@ -33,7 +33,6 @@ to the ```require``` section of your `composer.json` file.
 app/AppAsset.php;
 <?php
 class AppAsset extends AssetBundle {
-```
     public $depends = [
 		'yii\web\YiiAsset',
 		'tangniyuqi\zui\ZuiAsset',
