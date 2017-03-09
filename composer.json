@@ -1,0 +1,31 @@
+{
+    "name": "tangniyuqi/yii2-zui",
+    "description": "The ZUI extension for the Yii framework",
+    "keywords": ["yii2", "extension", "view", "theme", "plugin", "zui", "ZUI"],
+    "homepage": "https://github.com/tangniyuqi/yii2-zui",
+    "type": "yii2-extension",
+    "language": "php",
+    "license": "BSD 3-Clause",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "tangniyuqi",
+            "email": "tangniyuqi@163.com",
+            "homepage": "http://www.noooya.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "tangniyuqi\\zui\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.4.8-dev"
+        }
+    }
+}
