@@ -15,7 +15,7 @@ ZUI项目网站： http://zui.sexy/ 。
 Either run
 
 ```
-$ php composer.phar require tangniyuqi/yii2-zui "*"
+$ php composer.phar require tangniyuqi/yii2-zui "@dev"
 ```
 
 or add
