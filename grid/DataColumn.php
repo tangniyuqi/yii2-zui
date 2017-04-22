@@ -1,10 +1,14 @@
 <?php
 /**
- * @link http://www.yiiframework.com/
- * @copyright Copyright (c) 2008 Yii Software LLC
- * @license http://www.yiiframework.com/license/
+ * DataColumn
+ *
+ *@package common.models.queries;
+ *@author tangming <tangniyuqi@163.com>
+ *@copyright DNA <http://www.Noooya.com/>
+ *@version 1.0.0
+ *@since 2017-04-19 Create
+ *@todo N/A
  */
-
 namespace tangniyuqi\zui\grid;
 
 use yii\helpers\ArrayHelper;
@@ -12,21 +16,21 @@ use yii\helpers\Html;
 
 class DataColumn extends \yii\grid\DataColumn
 {
+    /**
+     * @inheritdoc
+     */
+    public $defaultfilterCss = 'input-sm';
 
-
-   public $defaultfilterCss = 'input-sm'; //加强对过滤的 input 大小统一约束
-
+    /**
+     * @inheritdoc
+     */
     public function init()
     {
         parent::init();
-
         Html::addCssClass($this->filterInputOptions, $this->defaultfilterCss);
 
         if ($this->attribute == 'id' && !isset($this->headerOptions['style'])) {
-
             $this->headerOptions['style'] = 'width:80px';
-
         }
     }
-
 }

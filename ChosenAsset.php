@@ -8,16 +8,14 @@ use yii\web\AssetBundle;
  * @author tangniyuqi@163.com
  * @since 1.0
  */
-class ChosenAsset extends AssetBundle {
-
+class ChosenAsset extends \yii\web\AssetBundle
+{
 	public $css = [
-        'lib/chosen/chosen.min.css',
-        'lib/chosen/chosen.icons.min.css',
+        'js/jquery/chosen/min.css',
 	];
 
 	public $js = [
-        'lib/chosen/chosen.min.js',
-        'lib/chosen/chosen.icons.min.js',
+        'js/jquery/chosen/min.js',
 	];
 
     public $depends = [
@@ -26,13 +24,8 @@ class ChosenAsset extends AssetBundle {
 
 	public function init()
     {
-
         parent::init();
 
         $this->sourcePath = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'assets';
-
-
     }
-
-
 }
