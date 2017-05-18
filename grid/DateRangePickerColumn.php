@@ -1,12 +1,17 @@
 <?php
 /**
- * @link http://www.yiiframework.com/
- * @copyright Copyright (c) 2008 Yii Software LLC
- * @license http://www.yiiframework.com/license/
+ * DateRangePickerColumn
+ *
+ *@package vendor.tangniyuqi.yii2-zui.grid
+ *@author tangming <tangniyuqi@163.com>
+ *@copyright DNA <http://www.Noooya.com/>
+ *@version 1.0.0
+ *@since 2017-05-18 Create
+ *@todo N/A
  */
-
 namespace tangniyuqi\zui\grid;
 
+use Yii;
 use yii\base\Model;
 use yii\helpers\Html;
 
@@ -21,8 +26,11 @@ class DateRangePickerColumn extends \tangniyuqi\zui\grid\DataColumn
 
 	public $format = ['date', 'php:Y-m-d'];
 
-	public function init() {
-
+	/**
+     * @inheritdoc
+     */
+	public function init()
+	{
 		parent::init();
 
 		$filterWidgetOptions = [
@@ -65,14 +73,14 @@ class DateRangePickerColumn extends \tangniyuqi\zui\grid\DataColumn
 		$model = $this->grid->filterModel;
 
 		if ($this->filter !== false && $model instanceof Model && $this->attribute !== null && $model->isAttributeActive($this->attribute)) {
+			$error = '';
+
 			if ($model->hasErrors($this->attribute)) {
 				Html::addCssClass($this->filterOptions, 'has-error');
-				$error = ' ' . Html::error($model, $this->attribute, $this->grid->filterErrorOptions);
-			} else {
-				$error = '';
+				$error = ' '.Html::error($model, $this->attribute, $this->grid->filterErrorOptions);
 			}
 
-			return $this->myWidget($model) . $error; // Html::activeTextInput($model, $this->attribute, $this->
+			return $this->myWidget($model).$error; // Html::activeTextInput($model, $this->attribute, $this->
 		} else {
 			return parent::renderFilterCellContent();
 		}

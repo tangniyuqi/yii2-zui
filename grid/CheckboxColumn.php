@@ -1,10 +1,14 @@
 <?php
 /**
- * @link http://www.yiiframework.com/
- * @copyright Copyright (c) 2008 Yii Software LLC
- * @license http://www.yiiframework.com/license/
+ * CheckboxColumn
+ *
+ *@package vendor.tangniyuqi.yii2-zui.grid
+ *@author tangming <tangniyuqi@163.com>
+ *@copyright DNA <http://www.Noooya.com/>
+ *@version 1.0.0
+ *@since 2017-05-18 Create
+ *@todo N/A
  */
-
 namespace tangniyuqi\zui\grid;
 
 class CheckboxColumn extends \yii\grid\CheckboxColumn

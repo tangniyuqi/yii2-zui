@@ -2,7 +2,7 @@
 /**
  * DataColumn
  *
- *@package common.models.queries;
+ *@package vendor.tangniyuqi.yii2-zui.grid
  *@author tangming <tangniyuqi@163.com>
  *@copyright DNA <http://www.Noooya.com/>
  *@version 1.0.0
@@ -11,7 +11,7 @@
  */
 namespace tangniyuqi\zui\grid;
 
-use yii\helpers\ArrayHelper;
+use Yii;
 use yii\helpers\Html;
 
 class DataColumn extends \yii\grid\DataColumn

@@ -1,4 +1,14 @@
 <?php
+/**
+ * ActionColumn
+ *
+ *@package vendor.tangniyuqi.yii2-zui.grid
+ *@author tangming <tangniyuqi@163.com>
+ *@copyright DNA <http://www.Noooya.com/>
+ *@version 1.0.0
+ *@since 2017-05-18 Create
+ *@todo N/A
+ */
 namespace tangniyuqi\zui\grid;
 
 use Yii;
@@ -8,6 +18,9 @@ use yii\helpers\Url;
 
 class ActionColumn extends \yii\grid\ActionColumn
 {
+    /**
+     * @inheritdoc
+     */
     public $header = '动作';
 
     public $template = '{view}&nbsp;&nbsp;{update}&nbsp;&nbsp;{delete}';
@@ -16,6 +29,9 @@ class ActionColumn extends \yii\grid\ActionColumn
 
     public $headerOptions = ['class' => 'action-column', 'style'=> 'min-width:100px'];
 
+    /**
+     * @inheritdoc
+     */
     protected function initDefaultButtons()
     {
         if (!isset($this->buttons['view'])) {
@@ -25,6 +41,7 @@ class ActionColumn extends \yii\grid\ActionColumn
                     'aria-label' => Yii::t('yii', 'View'),
                     'data-pjax' => '0',
                 ], $this->buttonOptions);
+
                 return Html::a('<i class="icon icon-search"></i>', $url, $options);
             };
         }
@@ -36,6 +53,7 @@ class ActionColumn extends \yii\grid\ActionColumn
                     'aria-label' => Yii::t('yii', 'Update'),
                     'data-pjax' => '0',
                 ], $this->buttonOptions);
+
                 return Html::a('<i class="icon icon-pencil"></i>', $url, $options);
             };
         }
@@ -49,19 +67,14 @@ class ActionColumn extends \yii\grid\ActionColumn
                     'data-method' => 'POST',
                     'data-pjax' => '0',
                 ], $this->buttonOptions);
+
                 return Html::a('<i class="icon icon-trash"></i>', $url, $options);
             };
         }
     }
 
     /**
-     * Creates a URL for the given action and model.
-     * This method is called for each button and each row.
-     * @param string $action the button name (or action ID)
-     * @param \yii\db\ActiveRecord $model the data model
-     * @param mixed $key the key associated with the data model
-     * @param integer $index the current row index
-     * @return string the created URL
+     * @inheritdoc
      */
     public function createUrl($action, $model, $key, $index)
     {
