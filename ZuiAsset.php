@@ -24,10 +24,16 @@ class ZuiAsset extends \yii\web\AssetBundle
         'theme/default/style.css',
     ];
 
+    /**
+     * @inheritdoc
+     */
     public $js = [
         'js/zui/min.js',
     ];
 
+    /**
+     * @inheritdoc
+     */
     public $depends = [
         'yii\web\YiiAsset',
     ];

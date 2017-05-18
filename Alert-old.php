@@ -1,27 +1,21 @@
 <?php
 /**
- * @link http://www.yiiframework.com/
- * @copyright Copyright (c) 2008 Yii Software LLC
- * @license http://www.yiiframework.com/license/
+ * Alert
+ *
+ *@package vendor.tangniyuqi.yii2-zui
+ *@author tangming <tangniyuqi@163.com>
+ *@copyright DNA <http://www.Noooya.com/>
+ *@version 1.0.0
+ *@since 2017-05-18 Create
+ *@todo N/A
  */
-
 namespace tangniyuqi\zui;
 
-/**
- * @package tangniyuqi.zui.Alert
- * @copyright DNA <http://www.Noooya.com/>
- * @version 1.0.0
- * @author tangniyuqi@163.com
- * @since 1.0
- */
 class Alert extends \yii\bootstrap\Widget
 {
 	/**
-	 * @var array the alert types configuration for the flash messages.
-	 * This array is setup as $key => $value, where:
-	 * - $key is the name of the session flash variable
-	 * - $value is the bootstrap alert type (i.e. danger, success, info, warning)
-	 */
+     * @inheritdoc
+     */
 	public $alertTypes = [
 		'error' => 'alert-danger',
 		'danger' => 'alert-danger',
@@ -31,10 +25,13 @@ class Alert extends \yii\bootstrap\Widget
 	];
 
 	/**
-	 * @var array the options for rendering the close button tag.
-	 */
+     * @inheritdoc
+     */
 	public $closeButton = [];
 
+	/**
+     * @inheritdoc
+     */
 	public function init()
 	{
 		parent::init();
@@ -46,17 +43,13 @@ class Alert extends \yii\bootstrap\Widget
 		foreach ($flashes as $type => $data) {
 			if (isset($this->alertTypes[$type])) {
 				$data = (array) $data;
-				foreach ($data as $i => $message) {
-					/* initialize css class for each alert box */
-					$this->options['class'] = $this->alertTypes[$type] . $appendCss;
 
-					/* assign unique id to each alert box */
+				foreach ($data as $i => $message) {
+					$this->options['class'] = $this->alertTypes[$type] . $appendCss;
 					//$this->options['id'] = $this->getId() . '-' . $type . '-' . $i;
 
 					if (is_array($message)) {
-
 						$message = implode($message, '<br>');
-
 					}
 
 					echo \yii\bootstrap\Alert::widget([

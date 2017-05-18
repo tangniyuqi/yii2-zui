@@ -1,13 +1,24 @@
 <?php
-
+/**
+ * LinkPager
+ *
+ *@package vendor.tangniyuqi.yii2-zui
+ *@author tangming <tangniyuqi@163.com>
+ *@copyright DNA <http://www.Noooya.com/>
+ *@version 1.0.0
+ *@since 2017-05-18 Create
+ *@todo N/A
+ */
 namespace tangniyuqi\zui;
 
-use yii\data\Pagination;
 use yii\helpers\Html;
+use yii\data\Pagination;
 
-class LinkPager extends \yii\widgets\LinkPager {
-
-
+class LinkPager extends \yii\widgets\LinkPager
+{
+    /**
+     * @inheritdoc
+     */
     public $options = ['class' => 'pager'];
 
     public $linkOptions = ['class' =>''];
@@ -33,20 +44,4 @@ class LinkPager extends \yii\widgets\LinkPager {
     public $lastPageLabel = '<i class="icon icon-double-angle-right"></i>';
 
     public $pageCssClass = '';
-
-
-/*
-<ul class="pager">
-        <li class="previous"><a href="#">«</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li class="active"><a href="#">5</a></li>
-        <li><a href="###" data-toggle="pager" data-placement="bottom">更多</a></li>
-        <li><a href="#">12</a></li>
-        <li class="next"><a href="#">»</a></li>
-      </ul>*/
-
-
 }

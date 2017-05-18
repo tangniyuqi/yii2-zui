@@ -1,20 +1,20 @@
 <?php
+/**
+ * ActiveField
+ *
+ *@package vendor.tangniyuqi.yii2-zui
+ *@author tangming <tangniyuqi@163.com>
+ *@copyright DNA <http://www.Noooya.com/>
+ *@version 1.0.0
+ *@since 2017-05-18 Create
+ *@todo N/A
+ */
 namespace tangniyuqi\zui;
-
 
 use yii\helpers\Html;
 
-/**
- * @package tangniyuqi.zui.ActiveField
- * @copyright DNA <http://www.Noooya.com/>
- * @version 1.0.0
- * @author tangniyuqi@163.com
- * @since 1.0
- */
-
 class ActiveField extends \yii\bootstrap\ActiveField
 {
-
     /**
      * 根据bootstrap3 form-control-static 设置一个form field 静态文本
      * A radio button list is like a checkbox list, except that it only allows single selection.
@@ -36,5 +36,4 @@ class ActiveField extends \yii\bootstrap\ActiveField
 
         return $this;
     }
-
 }
