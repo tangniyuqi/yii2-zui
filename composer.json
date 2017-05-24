@@ -1,7 +1,8 @@
 {
     "name": "tangniyuqi/yii2-zui",
-    "description": "The ZUI extension for the Yii framework",
-    "keywords": ["yii2", "extension", "view", "theme", "plugin", "zui", "ZUI"],
+    "version": "1.0.0",
+    "description": "The zui extension for the Yii framework",
+    "keywords": ["yii2", "extension", "zui"],
     "homepage": "https://github.com/tangniyuqi/yii2-zui",
     "type": "yii2-extension",
     "language": "php",
@@ -21,11 +22,6 @@
     "autoload": {
         "psr-4": {
             "tangniyuqi\\zui\\": ""
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.5.0-dev"
         }
     }
 }
