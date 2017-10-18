@@ -42,21 +42,23 @@ class ActionColumn extends \yii\grid\ActionColumn
                     'data-pjax' => '0',
                 ], $this->buttonOptions);
 
-                return Html::a('<i class="icon icon-search"></i>', $url, $options);
+                return Html::a('<i class="icon icon-search fa fa-eye"></i>', $url, $options);
             };
         }
+
         if (!isset($this->buttons['update'])) {
             $this->buttons['update'] = function ($url, $model, $key) {
                 $options = array_merge([
                     'title' => Yii::t('yii', 'Update'),
-                   // 'class' => 'text-danger',
+                    //'class' => 'text-danger',
                     'aria-label' => Yii::t('yii', 'Update'),
                     'data-pjax' => '0',
                 ], $this->buttonOptions);
 
-                return Html::a('<i class="icon icon-pencil"></i>', $url, $options);
+                return Html::a('<i class="icon icon-pencil fa fa-edit"></i>', $url, $options);
             };
         }
+
         if (!isset($this->buttons['delete'])) {
             $this->buttons['delete'] = function ($url, $model, $key) {
                 $options = array_merge([
@@ -68,7 +70,7 @@ class ActionColumn extends \yii\grid\ActionColumn
                     'data-pjax' => '0',
                 ], $this->buttonOptions);
 
-                return Html::a('<i class="icon icon-trash"></i>', $url, $options);
+                return Html::a('<i class="icon icon-trash fa fa-trash"></i>', $url, $options);
             };
         }
     }
