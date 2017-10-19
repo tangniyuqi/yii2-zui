@@ -21,11 +21,11 @@ class ActionColumn extends \yii\grid\ActionColumn
     /**
      * @inheritdoc
      */
-    public $header = '动作';
+    public $header = '操作';
 
-    public $template = '{view}&nbsp;&nbsp;{update}&nbsp;&nbsp;{delete}';
+    public $template = '{view} {update} {delete}';
 
-    public $contentOptions = ['class' => 'text-center'];
+    public $contentOptions = ['class' => 'text-center2'];
 
     public $headerOptions = ['class' => 'action-column', 'style'=> 'min-width:100px'];
 
@@ -50,7 +50,7 @@ class ActionColumn extends \yii\grid\ActionColumn
             $this->buttons['update'] = function ($url, $model, $key) {
                 $options = array_merge([
                     'title' => Yii::t('yii', 'Update'),
-                    //'class' => 'text-danger',
+                    'class' => 'ml-1',
                     'aria-label' => Yii::t('yii', 'Update'),
                     'data-pjax' => '0',
                 ], $this->buttonOptions);
@@ -63,7 +63,7 @@ class ActionColumn extends \yii\grid\ActionColumn
             $this->buttons['delete'] = function ($url, $model, $key) {
                 $options = array_merge([
                     'title' => Yii::t('yii', 'Delete'),
-                    'class' => 'text-danger',
+                    'class' => 'text-danger ml-1',
                     'aria-label' => Yii::t('yii', 'Delete'),
                     'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
                     'data-method' => 'POST',
