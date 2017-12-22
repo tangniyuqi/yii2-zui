@@ -25,9 +25,11 @@ class ActionColumn extends \yii\grid\ActionColumn
 
     public $template = '{view} {update} {delete}';
 
-    public $contentOptions = ['class' => 'text-center2'];
+    public $filterOptions = ['class' => ''];
 
     public $headerOptions = ['class' => 'action-column', 'style'=> 'min-width:100px'];
+
+    public $contentOptions = ['class' => ''];
 
     /**
      * @inheritdoc

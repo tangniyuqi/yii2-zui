@@ -48,7 +48,7 @@ class DropdownColumn extends \tangniyuqi\zui\grid\DataColumn
         if(!$this->filter) {
             $class = get_parent_class($model);
             $this->filter = (new $class)->getArray()[$attribute];
-            $this->filterInputOptions =  ['prompt' => $this->prompt, 'class' => 'form-control input-sm'];
+            $this->filterInputOptions =  ['prompt' => $this->prompt, 'class' => 'form-control form-control-sm input-sm'];
         }
 
         parent::init();
