@@ -19,7 +19,7 @@ class DataColumn extends \yii\grid\DataColumn
     /**
      * @inheritdoc
      */
-    public $defaultfilterCss = 'form-control-sm';
+    public $defaultfilterCss = 'form-control-sm input-sm';
 
     /**
      * @inheritdoc
